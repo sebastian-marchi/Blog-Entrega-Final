@@ -8,14 +8,15 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-Luego ingrese a [http://localhost:8000/blog](http://localhost:8000/blog)
+Luego ingrese a [http://localhost:8000/](http://localhost:8000/)
+En caso de solicitarlo, instalar 'python -p install Pillow' en la terminal bash.
 
 # Site Maps
 
 ![Con Login](./site_map.drawio.png)
 ![Sin Login](./site_map2.drawio.png)
 
-fin
+en caso de solicitarlo, instalar 'python -p install Pillow' en la terminal bash.
 
-otro cambio
+fin
 
