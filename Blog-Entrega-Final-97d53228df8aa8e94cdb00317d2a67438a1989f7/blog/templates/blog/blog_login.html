@@ -1,0 +1,7 @@
+<form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Iniciar Sesión</button>
+    <a href="{% url 'blog_list' %}">Volver a Lista</a>
+</form>
+
