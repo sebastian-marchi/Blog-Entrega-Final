@@ -63,4 +63,3 @@ class BlogLogin(LoginView):
 
 class BlogLogout(LogoutView):
     template_name = 'blog/blog_logout.html'
-
