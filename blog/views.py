@@ -8,6 +8,7 @@ from django.contrib.auth.views import LoginView, LogoutView
 from blog.models import BlogModel
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.forms import UserCreationForm
+from django.http import HttpResponse, HttpResponseRedirect
 
 
 
@@ -63,3 +64,6 @@ class BlogLogin(LoginView):
 
 class BlogLogout(LogoutView):
     template_name = 'blog/blog_logout.html'
+
+def About(request):
+    return render(request, 'blog/blog_about.html')
