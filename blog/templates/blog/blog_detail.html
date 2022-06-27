@@ -11,14 +11,15 @@
     <title>Proyecto blog</title>
   </head>
   <body>
-
-    <a class="btn btn-outline-info" href="{% url 'blog_list' %}">Volver a Lista</a>
-    <div>
-        <h1 class = "bg-info color-red">{{object.titulo}}</h1>
-        <h2>{{object.sub_titulo}}</h2>
-        <p> {{object.cuerpo}} </p>
-        <h3>{{object.fecha}}</h3>
-        <h3>{{object.autor}}</h3>
+    <div class = "container">
+      <a class="btn btn-outline-dark" href="{% url 'blog_list' %}">Volver a Lista</a><br>
+      <h1 class = "text-dark"> Título: {{object.titulo}}</h1>
+      <h2> Subtítulo: {{object.sub_titulo}}</h2>
+      <div class="card">
+      <p class="card-body"> {{object.cuerpo}} </p>
+      </div>
+      <h3>{{object.fecha}}</h3>
+      <h3>Autor: {{object.autor}}</h3>
     </div>
   </body>
 </html>

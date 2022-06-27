@@ -12,7 +12,7 @@
   </head>
   <body>
 
-<a href="{% url 'blogger_profile' user.id %}">Volver a Profile</a>
+<a class="btn btn-outline-dark" href="{% url 'blogger_profile' user.id %}">Volver a Profile</a>
 
 <form method="post">
     {% csrf_token %}
