@@ -11,27 +11,28 @@
     <title>Proyecto blog</title>
   </head>
   <body>
-    <div class="container pt-5my-5 bg-dark text-white">  
+    <div class="mt-4 p-5 bg-info text-white rounded">  
     {% if user.is_authenticated %}
-      <a href="{% url 'blog_logout' %}">Salir</a><br>
-      <a href="{% url 'blog_create' %}">Nuevo Blog</a><br>
-      <a href="{% url 'blogger_profile' user.id %}">Perfil {{user.username}}</a><br>
+      <a class="btn btn-outline-dark"href="{% url 'blog_logout' %}">Salir</a><br><br>
+      <a class="btn btn-outline-dark" href="{% url 'blog_create' %}">Nuevo Blog</a><br><br>
+      <a class="btn btn-outline-dark"href="{% url 'blogger_profile' user.id %}">Perfil {{user.username}}</a><br>
     {% else %}
-      <a href="{% url 'blog_login' %}">Entrar</a><br>
-      <a href="{% url 'blogger_signup' %}">Crear Cuenta</a><br>
+      <a class="btn btn-outline-dark"href="{% url 'blog_login' %}">Entrar</a><br><br>
+      <a class="btn btn-outline-dark"href="{% url 'blogger_signup' %}">Crear Cuenta</a><br>
     {% endif %}
-  </div>
+    </div>
 
 
-  <div class="container pt-5">  
+  <div class="container pt-5 text-primary">  
 {% if object_list %}
     {% for blog in object_list %}
     <li>
         
         <a href="{% url 'blog_detail' blog.id %}">{{blog.titulo}}</a>
         {% if user.is_authenticated %}
-          <a href="{% url 'blog_delete' blog.id %}">Borrar</a>
-          <a href="{% url 'blog_update' blog.id %}">Actualizar</a>
+          <a class="btn btn-outline-danger"href="{% url 'blog_delete' blog.id %}">Borrar</a>
+          <a class="btn btn-outline-primary"href="{% url 'blog_update' blog.id %}">Actualizar</a>
+          <br>
         {% endif %}
     </li>
     {% endfor %}

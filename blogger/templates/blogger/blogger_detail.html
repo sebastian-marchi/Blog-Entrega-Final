@@ -13,18 +13,20 @@
   <body>
 
 
-
-<a href="{% url 'blog_list' %}">Volver a Lista Blogs</a>
-<a href="{% url 'blogger_edit' user.id %}">Editar Perfil</a>
-
-<ul>
-  <li>Nombre: {{object.first_name}}<li>
-  <li>Apellido: {{object.last_name}}<li>
-  <li>Correo electronico: {{object.email}} </li>
-  <li>Nombre de Usuario: {{object.username}}</li>
+    <div class="mt-4 p-5 bg-info text-white rounded">  
+<a class="btn btn-outline-dark"href="{% url 'blog_list' %}">Ver Blogs</a>
+<a class="btn btn-outline-dark"href="{% url 'blogger_edit' user.id %}">Editar Perfil</a><br>
+    </div>
+    <div class="container">  
+<ul class="list-group list-group-flush">
+  <li class="list-group-item">Nombre: {{object.first_name}}<li>
+  <li class="list-group-item">Apellido: {{object.last_name}}<li>
+  <li class="list-group-item">Correo electronico: {{object.email}} </li>
+  <li class="list-group-item">Nombre de Usuario: {{object.username}}</li><br>
 </ul>
 
-<img height="128" src="{{ object.avatar_set.first.image.url }}" />
 
+<img height="128" class="rounded-circle" src="{{ object.avatar_set.first.image.url }}" />
+</div>
 </body>
 </html>
