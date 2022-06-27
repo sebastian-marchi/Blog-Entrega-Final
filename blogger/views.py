@@ -26,3 +26,4 @@ class BloggerUpdate(LoginRequiredMixin, UpdateView):
 
     def get_success_url(self):
       return reverse_lazy("blogger_profile", kwargs={"pk": self.request.user.id})
+

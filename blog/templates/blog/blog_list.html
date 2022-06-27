@@ -16,9 +16,11 @@
       <a href="{% url 'blog_logout' %}">Salir</a><br>
       <a href="{% url 'blog_create' %}">Nuevo Blog</a><br>
       <a href="{% url 'blogger_profile' user.id %}">Perfil {{user.username}}</a><br>
+      <a href="{% url 'blog_about' %}">About</a>
     {% else %}
       <a href="{% url 'blog_login' %}">Entrar</a><br>
       <a href="{% url 'blogger_signup' %}">Crear Cuenta</a><br>
+      <a href="{% url 'blog_about' %}">About</a>
     {% endif %}
   </div>
 
